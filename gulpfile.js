@@ -252,6 +252,7 @@ gulp.task('release', gulp.series(
 gulp.task('test', test);
 gulp.task('lint', lint);
 gulp.task('watch', watch);
+gulp.task('tag', tagBump);
 
 /**
  * Bump version numbers
