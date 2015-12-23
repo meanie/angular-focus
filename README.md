@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/meanie-angular-focus.svg)](https://www.npmjs.com/package/meanie-angular-focus)
 [![node dependencies](https://david-dm.org/meanie/angular-focus.svg)](https://david-dm.org/meanie/angular-focus)
 [![github issues](https://img.shields.io/github/issues/meanie/angular-focus.svg)](https://github.com/meanie/angular-focus/issues)
-[![codacy](https://img.shields.io/codacy/abcdefgh.svg)](https://www.codacy.com/app/meanie/angular-focus)
+[![codacy](https://img.shields.io/codacy/da49d6526e424c3394826592b19d86e3.svg)](https://www.codacy.com/app/meanie/angular-focus)
 [![Join the chat at https://gitter.im/meanie/meanie](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg)](https://gitter.im/meanie/meanie?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 An Angular service to set focus on specific DOM elements for [Meanie](https://github.com/meanie/meanie) projects.
