@@ -1,5 +1,5 @@
 /**
- * meanie-angular-focus - v1.0.1 - 24-11-2015
+ * meanie-angular-focus - v1.0.2 - 29-11-2015
  * https://github.com/meanie/angular-focus
  *
  * Copyright (c) 2015 Adam Buczynski <me@adambuczynski.com>
@@ -16,7 +16,7 @@ angular.module('Focus.Service', [])
  * Service definition
  */
 .factory('$focus', ['$timeout', '$window', function($timeout, $window) {
-  return function(element) {
+  return function(element, timeout) {
     if (typeof element === 'string') {
       element = $window.document.getElementById(element);
     }
@@ -25,7 +25,7 @@ angular.module('Focus.Service', [])
     }
     $timeout(function() {
       element.focus();
-    });
+    }, timeout || 0);
   };
 }]);
 

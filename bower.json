@@ -1,6 +1,6 @@
 {
   "name": "meanie-angular-focus",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./release/meanie-angular-focus.js",
   "ignore": [
     "**/.*",
