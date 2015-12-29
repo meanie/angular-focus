@@ -8,7 +8,7 @@ angular.module('Focus.Service', [])
  * Service definition
  */
 .factory('$focus', function($timeout, $window) {
-  return function(element) {
+  return function(element, timeout) {
     if (typeof element === 'string') {
       element = $window.document.getElementById(element);
     }
@@ -17,6 +17,6 @@ angular.module('Focus.Service', [])
     }
     $timeout(function() {
       element.focus();
-    });
+    }, timeout || 0);
   };
 });
