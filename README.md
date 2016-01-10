@@ -6,44 +6,25 @@
 [![codacy](https://img.shields.io/codacy/da49d6526e424c3394826592b19d86e3.svg)](https://www.codacy.com/app/meanie/angular-focus)
 [![Join the chat at https://gitter.im/meanie/meanie](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg)](https://gitter.im/meanie/meanie?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-An Angular service to set focus on specific DOM elements for [Meanie](https://github.com/meanie/meanie) projects.
+An Angular service to set focus on specific DOM elements
 
 ## Installation
 
-Install using the [Meanie CLI](https://www.npmjs.com/package/meanie):
-```shell
-meanie install fontello
-```
-
--- OR --
-
-## Installation
-
-You can install this package using `meanie`, `npm` or `bower`.
-
-### meanie
-
-```shell
-meanie install angular-focus
-```
-
-Then add `Focus.Service` as a dependency for your app:
-
-```js
-angular.module('App.MyModule', ['Focus.Service']);
-```
+You can install this package using `npm` or `bower`.
 
 ### npm
 
 ```shell
-npm install meanie-angular-focus
+npm install meanie-angular-focus --save
 ```
 
-Then add as a dependency for your app:
+Include the script `node_modules/meanie-angular-focus/release/meanie-angular-focus.js` in your build process, or add it via a `<script>` tag to your `index.html`:
 
-```js
-angular.module('App.MyModule', [require('meanie-angular-focus')]);
+```html
+<script src="node_modules/meanie-angular-focus/release/meanie-angular-focus.js"></script>
 ```
+
+Add `Analytics.Service` as a dependency for your app.
 
 ### bower
 
@@ -51,21 +32,19 @@ angular.module('App.MyModule', [require('meanie-angular-focus')]);
 bower install meanie-angular-focus
 ```
 
-Add a `<script>` to your `index.html`:
+Include the script `bower_components/meanie-angular-focus/release/meanie-angular-focus.js` in your build process, or add it via a `<script>` tag to your `index.html`:
 
 ```html
-<script src="/bower_components/meanie-angular-focus/release/meanie-angular-focus.js"></script>
+<script src="bower_components/meanie-angular-focus/release/meanie-angular-focus.js"></script>
 ```
 
-Then add `Focus.Service` as a dependency for your app:
-
-```js
-angular.module('App.MyModule', ['Focus.Service']);
-```
+Add `Focus.Service` as a dependency for your app.
 
 ## Usage
 ```js
-angular.module('App.MyModule').controller('MyController', function($focus) {
+angular.module('App.MyModule', [
+  'Focus.Service'
+]).controller('MyController', function($focus) {
 
   //Focus on element ID
   $focus('some-element-id');
@@ -89,4 +68,4 @@ If you would like to contribute to Meanie, please check out the [Meanie contribu
 
 (MIT License)
 
-Copyright 2016, [Adam Buczynski](http://adambuczynski.com)
+Copyright 2015-2016, [Adam Buczynski](http://adambuczynski.com)
