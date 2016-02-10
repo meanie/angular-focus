@@ -1,7 +1,7 @@
 {
   "name": "meanie-angular-focus",
   "description": "An Angular service to set focus on specific DOM elements",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "homepage": "https://github.com/meanie/angular-focus",
   "author": {
     "name": "Adam Buczynski",
