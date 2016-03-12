@@ -24,7 +24,7 @@ angular.module('Focus.Service', [])
       //HTML DOM element
       if (element && typeof element.focus === 'function') {
         if (ensureFocusable) {
-          element.attr('tabindex', -1);
+          element.setAttribute('tabindex', -1);
         }
         element.focus();
       }
