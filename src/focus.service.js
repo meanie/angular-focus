@@ -8,7 +8,7 @@ angular.module('Focus.Service', [])
  * Service definition
  */
 .factory('$focus', function($timeout, $window) {
-  return function(element, timeout) {
+  return function(element, timeout, ensureFocusable) {
     $timeout(function() {
 
       //String ID
@@ -23,6 +23,9 @@ angular.module('Focus.Service', [])
 
       //HTML DOM element
       if (element && typeof element.focus === 'function') {
+        if (ensureFocusable) {
+          element.attr('tabindex', -1);
+        }
         element.focus();
       }
     }, timeout || 0);
