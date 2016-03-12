@@ -1,5 +1,5 @@
 /**
- * meanie-angular-focus - v1.3.0 - 13-2-2016
+ * meanie-angular-focus - v1.3.1 - 13-2-2016
  * https://github.com/meanie/angular-focus
  *
  * Copyright (c) 2016 Adam Buczynski <me@adambuczynski.com>
@@ -32,7 +32,7 @@ angular.module('Focus.Service', [])
       //HTML DOM element
       if (element && typeof element.focus === 'function') {
         if (ensureFocusable) {
-          element.attr('tabindex', -1);
+          element.setAttribute('tabindex', -1);
         }
         element.focus();
       }
