@@ -7,7 +7,7 @@ angular.module('Focus.Service', [])
 /**
  * Service definition
  */
-.factory('$focus', function($timeout, $window) {
+.factory('$focus', function($timeout, $window, $log) {
   return function(element, timeout, ensureFocusable) {
     $timeout(function() {
 
@@ -16,6 +16,7 @@ angular.module('Focus.Service', [])
         !element ||
         (typeof element !== 'string' && typeof element !== 'object')
       ) {
+        $log.warn('Invalid element supplied for $focus:', element);
         return;
       }
 
