@@ -1,5 +1,5 @@
 /**
- * meanie-angular-focus - v1.3.3 - 5-5-2016
+ * meanie-angular-focus - v1.3.4 - 5-5-2016
  * https://github.com/meanie/angular-focus
  *
  * Copyright (c) 2016 Adam Buczynski <me@adambuczynski.com>
@@ -34,7 +34,7 @@ angular.module('Focus.Service', [])
       }
 
       //jQuery element
-      if (typeof element[0] !== 'undefined') {
+      if (element && typeof element[0] !== 'undefined') {
         element = element[0];
       }
 
