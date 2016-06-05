@@ -11,6 +11,14 @@ angular.module('Focus.Service', [])
   return function(element, timeout, ensureFocusable) {
     $timeout(function() {
 
+      //Invalid input
+      if (
+        !element ||
+        (typeof element !== 'string' && typeof element !== 'object')
+      ) {
+        return;
+      }
+
       //String ID
       if (typeof element === 'string') {
         element = $window.document.getElementById(element);
