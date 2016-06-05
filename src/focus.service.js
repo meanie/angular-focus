@@ -26,7 +26,7 @@ angular.module('Focus.Service', [])
       }
 
       //jQuery element
-      if (typeof element[0] !== 'undefined') {
+      if (element && typeof element[0] !== 'undefined') {
         element = element[0];
       }
 
