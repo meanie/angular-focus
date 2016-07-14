@@ -1,5 +1,5 @@
 /**
- * meanie-angular-focus - v1.4.0 - 14-6-2016
+ * meanie-angular-focus - v1.4.1 - 14-6-2016
  * https://github.com/meanie/angular-focus
  *
  * Copyright (c) 2016 Adam Buczynski <me@adambuczynski.com>

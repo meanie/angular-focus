@@ -44,9 +44,9 @@ angular.module('Focus.Service', [])
           element.setAttribute('tabindex', -1);
         }
         element.focus();
-        if (selectText) {
+        if (selectText && element.setSelectionRange) {
           if (!$window.getSelection().toString()) {
-            element[0].setSelectionRange(0, element[0].value.length);
+            element.setSelectionRange(0, element.value.length);
           }
         }
       }
