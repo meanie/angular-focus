@@ -12,9 +12,7 @@ An Angular service to set focus on specific DOM elements
 
 ## Installation
 
-You can install this package using `npm` or `bower`.
-
-### npm
+You can install this package using `npm`.
 
 ```shell
 npm install meanie-angular-focus --save
@@ -24,20 +22,6 @@ Include the script `node_modules/meanie-angular-focus/release/meanie-angular-foc
 
 ```html
 <script src="node_modules/meanie-angular-focus/release/meanie-angular-focus.js"></script>
-```
-
-Add `Analytics.Service` as a dependency for your app.
-
-### bower
-
-```shell
-bower install meanie-angular-focus
-```
-
-Include the script `bower_components/meanie-angular-focus/release/meanie-angular-focus.js` in your build process, or add it via a `<script>` tag to your `index.html`:
-
-```html
-<script src="bower_components/meanie-angular-focus/release/meanie-angular-focus.js"></script>
 ```
 
 Add `Focus.Service` as a dependency for your app.
@@ -51,8 +35,18 @@ angular.module('App.MyModule', [
   //Focus on element ID
   $focus('some-element-id');
 
-  //Or focus on given DOM element
+  //Or focus on given DOM or jQuery/jQlite element
   $focus(someElement);
+
+  //Focus after 250ms
+  $focus(someElement, 250);
+
+  //Focus and ensure element is selectable (e.g. for divs)
+  $focus(someElement, 0, true);
+
+  //Focus and select text of input field
+  $focus(someElement, true); //OR
+  $focus(someElement, 0, false, true);
 });
 ```
 
