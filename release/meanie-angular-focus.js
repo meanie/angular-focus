@@ -1,5 +1,5 @@
 /**
- * meanie-angular-focus - v1.4.1 - 14-6-2016
+ * meanie-angular-focus - v1.4.2 - 14-6-2016
  * https://github.com/meanie/angular-focus
  *
  * Copyright (c) 2016 Adam Buczynski <me@adambuczynski.com>
@@ -55,9 +55,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             element.setAttribute('tabindex', -1);
           }
           element.focus();
-          if (selectText) {
+          if (selectText && element.setSelectionRange) {
             if (!$window.getSelection().toString()) {
-              element[0].setSelectionRange(0, element[0].value.length);
+              element.setSelectionRange(0, element.value.length);
             }
           }
         }
