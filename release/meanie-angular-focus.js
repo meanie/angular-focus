@@ -1,5 +1,5 @@
 /**
- * meanie-angular-focus - v1.3.4 - 18-6-2016
+ * meanie-angular-focus - v1.4.2 - 18-6-2016
  * https://github.com/meanie/angular-focus
  *
  * Copyright (c) 2016 Adam Buczynski <me@adambuczynski.com>
@@ -22,7 +22,15 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
    * Service definition
    */
   .factory('$focus', ['$timeout', '$window', '$log', function ($timeout, $window, $log) {
-    return function (element, timeout, ensureFocusable) {
+    return function (element, timeout, ensureFocusable, selectText) {
+
+      //Parameter juggling
+      if (typeof timeout === 'boolean') {
+        selectText = timeout;
+        timeout = 0;
+      }
+
+      //Run after timeout
       $timeout(function () {
 
         //Invalid input
@@ -47,6 +55,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             element.setAttribute('tabindex', -1);
           }
           element.focus();
+          if (selectText && element.setSelectionRange) {
+            if (!$window.getSelection().toString()) {
+              element.setSelectionRange(0, element.value.length);
+            }
+          }
         }
       }, timeout || 0);
     };
