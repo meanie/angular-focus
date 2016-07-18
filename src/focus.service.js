@@ -24,8 +24,7 @@ angular.module('Focus.Service', [])
         !element ||
         (typeof element !== 'string' && typeof element !== 'object')
       ) {
-        $log.warn('Invalid element supplied for $focus:', element);
-        return;
+        return $log.warn('Invalid element supplied for $focus:', element);
       }
 
       //String ID
