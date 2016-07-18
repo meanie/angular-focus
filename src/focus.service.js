@@ -8,8 +8,16 @@ angular.module('Focus.Service', [])
  * Service definition
  */
 .factory('$focus', function($timeout, $window, $log) {
-  return function(element, timeout, ensureFocusable) {
-    $timeout(function() {
+  return function(element, timeout, ensureFocusable, selectText) {
+
+    //Parameter juggling
+    if (typeof timeout === 'boolean') {
+      selectText = timeout;
+      timeout = 0;
+    }
+
+    //Run after timeout
+    $timeout(() => {
 
       //Invalid input
       if (
@@ -36,6 +44,11 @@ angular.module('Focus.Service', [])
           element.setAttribute('tabindex', -1);
         }
         element.focus();
+        if (selectText && element.setSelectionRange) {
+          if (!$window.getSelection().toString()) {
+            element.setSelectionRange(0, element.value.length);
+          }
+        }
       }
     }, timeout || 0);
   };

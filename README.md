@@ -24,7 +24,7 @@ Include the script `node_modules/meanie-angular-focus/release/meanie-angular-foc
 <script src="node_modules/meanie-angular-focus/release/meanie-angular-focus.js"></script>
 ```
 
-Add `Analytics.Service` as a dependency for your app.
+Add `Focus.Service` as a dependency for your app.
 
 ## Usage
 ```js
@@ -35,8 +35,18 @@ angular.module('App.MyModule', [
   //Focus on element ID
   $focus('some-element-id');
 
-  //Or focus on given DOM element
+  //Or focus on given DOM or jQuery/jQlite element
   $focus(someElement);
+
+  //Focus after 250ms
+  $focus(someElement, 250);
+
+  //Focus and ensure element is selectable (e.g. for divs)
+  $focus(someElement, 0, true);
+
+  //Focus and select text of input field
+  $focus(someElement, true); //OR
+  $focus(someElement, 0, false, true);
 });
 ```
 
