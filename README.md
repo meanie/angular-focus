@@ -1,4 +1,4 @@
-# angular-focus
+# meanie-angular-focus
 
 [![npm version](https://img.shields.io/npm/v/meanie-angular-focus.svg)](https://www.npmjs.com/package/meanie-angular-focus)
 [![node dependencies](https://david-dm.org/meanie/angular-focus.svg)](https://david-dm.org/meanie/angular-focus)
@@ -12,9 +12,7 @@ An Angular service to set focus on specific DOM elements
 
 ## Installation
 
-You can install this package using `npm` or `bower`.
-
-### npm
+You can install this package using `npm`:
 
 ```shell
 npm install meanie-angular-focus --save
@@ -27,20 +25,6 @@ Include the script `node_modules/meanie-angular-focus/release/meanie-angular-foc
 ```
 
 Add `Analytics.Service` as a dependency for your app.
-
-### bower
-
-```shell
-bower install meanie-angular-focus
-```
-
-Include the script `bower_components/meanie-angular-focus/release/meanie-angular-focus.js` in your build process, or add it via a `<script>` tag to your `index.html`:
-
-```html
-<script src="bower_components/meanie-angular-focus/release/meanie-angular-focus.js"></script>
-```
-
-Add `Focus.Service` as a dependency for your app.
 
 ## Usage
 ```js
