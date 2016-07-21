@@ -1,12 +1,9 @@
 /**
- * meanie-angular-focus - v1.4.3 - 18-6-2016
- * https://github.com/meanie/angular-focus
+ * meanie-angular-focus * https://github.com/meanie/angular-focus
  *
  * Copyright (c) 2016 Adam Buczynski <me@adambuczynski.com>
  * License: MIT
  */
-'use strict';
-
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 (function (window, angular, undefined) {
@@ -35,8 +32,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
         //Invalid input
         if (!element || typeof element !== 'string' && (typeof element === 'undefined' ? 'undefined' : _typeof(element)) !== 'object') {
-          $log.warn('Invalid element supplied for $focus:', element);
-          return;
+          return $log.warn('Invalid element supplied for $focus:', element);
         }
 
         //String ID
