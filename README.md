@@ -1,6 +1,6 @@
-# meanie-angular-focus
+# @meanie/angular-focus
 
-[![npm version](https://img.shields.io/npm/v/meanie-angular-focus.svg)](https://www.npmjs.com/package/meanie-angular-focus)
+[![npm version](https://img.shields.io/npm/v/@meanie/angular-focus.svg)](https://www.npmjs.com/package/@meanie/angular-focus)
 [![node dependencies](https://david-dm.org/meanie/angular-focus.svg)](https://david-dm.org/meanie/angular-focus)
 [![github issues](https://img.shields.io/github/issues/meanie/angular-focus.svg)](https://github.com/meanie/angular-focus/issues)
 [![codacy](https://img.shields.io/codacy/da49d6526e424c3394826592b19d86e3.svg)](https://www.codacy.com/app/meanie/angular-focus)
@@ -12,16 +12,20 @@ An Angular service to set focus on specific DOM elements
 
 ## Installation
 
-You can install this package using `npm`:
+You can install this package using `yarn` or `npm`:
 
 ```shell
-npm install meanie-angular-focus --save
+#yarn
+yarn add @meanie/angular-focus
+
+#npm
+npm install @meanie/angular-focus --save
 ```
 
-Include the script `node_modules/meanie-angular-focus/release/meanie-angular-focus.js` in your build process, or add it via a `<script>` tag to your `index.html`:
+Include the script `node_modules/@meanie/angular-focus/release/angular-focus.js` in your build process, or add it via a `<script>` tag to your `index.html`:
 
 ```html
-<script src="node_modules/meanie-angular-focus/release/meanie-angular-focus.js"></script>
+<script src="node_modules/@meanie/angular-focus/release/angular-focus.js"></script>
 ```
 
 Add `Focus.Service` as a dependency for your app.
@@ -52,7 +56,7 @@ angular.module('App.MyModule', [
 
 ## Issues & feature requests
 
-Please report any bugs, issues, suggestions and feature requests in the [meanie-angular-focus issue tracker](https://github.com/meanie/angular-focus/issues).
+Please report any bugs, issues, suggestions and feature requests in the [@meanie/angular-focus issue tracker](https://github.com/meanie/angular-focus/issues).
 
 ## Contributing
 
@@ -66,4 +70,4 @@ Pull requests are welcome! If you would like to contribute to Meanie, please che
 
 (MIT License)
 
-Copyright 2015-2017, [Adam Reis](http://adam.reis.nz)
+Copyright 2015-2017, [Adam Reis](https://adam.reis.nz)

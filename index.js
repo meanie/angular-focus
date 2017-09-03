@@ -1,2 +1,2 @@
-require('./release/meanie-angular-focus.js');
+require('./release/angular-focus.js');
 module.exports = 'Focus.Service';
